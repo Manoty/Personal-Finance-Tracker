@@ -1,0 +1,33 @@
+version: 2
+
+models:
+  - name: stg_transactions
+    description: "Cleaned and standardized transaction data with unified merchant names"
+    columns:
+      - name: txn_id
+        description: "Unique identifier for each transaction"
+        tests:
+          - unique
+          - not_null
+      
+      - name: transaction_date
+        description: "Date of the transaction"
+        tests:
+          - not_null
+      
+      - name: merchant_clean
+        description: "Standardized merchant name (Starbucks/Dunkin variants unified)"
+        tests:
+          - not_null
+      
+      - name: amount
+        description: "Transaction amount"
+        tests:
+          - not_null
+      
+      - name: account_type
+        description: "Type of account"
+        tests:
+          - not_null
+          - accepted_values:
+              values: ['Checking', 'Credit Card']

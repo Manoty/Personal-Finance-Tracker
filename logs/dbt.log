@@ -1019,3 +1019,746 @@ alter table "personal_finance"."main"."fct_burn_rate__dbt_tmp" rename to "fct_bu
 [0m08:05:47.939804 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'invocation', 'label': 'end', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x0000020CA905D010>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x0000020CA9289B90>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x0000020CA928A110>]}
 [0m08:05:47.940800 [debug] [MainThread]: Flushing usage events
 [0m08:05:49.048115 [debug] [MainThread]: An error was encountered while trying to flush usage events
+[0m08:17:27.231920 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'invocation', 'label': 'start', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x0000018D03CB2DD0>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x0000018D03CB28D0>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x0000018D03CB2A90>]}
+
+
+============================== 08:17:27.241769 | d476112d-f231-4995-a5dd-4174224cef7f ==============================
+[0m08:17:27.241769 [info ] [MainThread]: Running with dbt=1.11.2
+[0m08:17:27.242768 [debug] [MainThread]: running dbt with arguments {'version_check': 'True', 'no_print': 'None', 'static_parser': 'True', 'warn_error_options': 'WarnErrorOptionsV2(error=[], warn=[], silence=[])', 'target_path': 'None', 'printer_width': '80', 'write_json': 'True', 'empty': 'False', 'log_cache_events': 'False', 'introspect': 'True', 'cache_selected_only': 'False', 'log_format': 'default', 'debug': 'False', 'fail_fast': 'False', 'partial_parse': 'True', 'send_anonymous_usage_stats': 'True', 'quiet': 'False', 'warn_error': 'None', 'profiles_dir': 'C:\\Users\\Evans Moseti\\.dbt', 'indirect_selection': 'eager', 'use_colors': 'True', 'invocation_command': 'dbt run', 'use_experimental_parser': 'False', 'log_path': 'C:\\kev\\personal_finance_tracker\\personal_finance_tracker\\logs'}
+[0m08:17:27.904622 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'project_id', 'label': 'd476112d-f231-4995-a5dd-4174224cef7f', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x0000018D03D61890>]}
+[0m08:17:28.005770 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'adapter_info', 'label': 'd476112d-f231-4995-a5dd-4174224cef7f', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x0000018D7FCD0A10>]}
+[0m08:17:28.010889 [info ] [MainThread]: Registered adapter: duckdb=1.10.0
+[0m08:17:28.426132 [debug] [MainThread]: checksum: 3d40d8bbe1bef07db1c24822f2dbfff8bc07f2a48ed4fe2658a40653aec0b54b, vars: {}, profile: , target: , version: 1.11.2
+[0m08:17:28.687615 [debug] [MainThread]: Partial parsing enabled: 0 files deleted, 1 files added, 0 files changed.
+[0m08:17:28.688613 [debug] [MainThread]: Partial parsing: added file: personal_finance_tracker://models\staging\stg_schema.yml
+[0m08:17:28.971470 [warn ] [MainThread]: [[33mWARNING[0m][MissingArgumentsPropertyInGenericTestDeprecation]: Deprecated
+functionality
+Found top-level arguments to test `accepted_values` defined on
+'stg_transactions' in package 'personal_finance_tracker'
+(models\staging\stg_schema.yml). Arguments to generic tests should be nested
+under the `arguments` property.
+[0m08:17:28.973683 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'deprecation', 'label': 'd476112d-f231-4995-a5dd-4174224cef7f', 'property_': 'warn', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x0000018D053A2E10>]}
+[0m08:17:29.148544 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'load_project', 'label': 'd476112d-f231-4995-a5dd-4174224cef7f', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x0000018D053B36D0>]}
+[0m08:17:29.410490 [debug] [MainThread]: Wrote artifact WritableManifest to C:\kev\personal_finance_tracker\personal_finance_tracker\target\manifest.json
+[0m08:17:29.423445 [debug] [MainThread]: Wrote artifact SemanticManifest to C:\kev\personal_finance_tracker\personal_finance_tracker\target\semantic_manifest.json
+[0m08:17:29.475965 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'resource_counts', 'label': 'd476112d-f231-4995-a5dd-4174224cef7f', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x0000018D05355050>]}
+[0m08:17:29.476963 [info ] [MainThread]: Found 1 seed, 2 models, 7 data tests, 472 macros
+[0m08:17:29.478989 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'runnable_timing', 'label': 'd476112d-f231-4995-a5dd-4174224cef7f', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x0000018D055006D0>]}
+[0m08:17:29.482204 [info ] [MainThread]: 
+[0m08:17:29.483169 [info ] [MainThread]: Concurrency: 4 threads (target='dev')
+[0m08:17:29.485162 [info ] [MainThread]: 
+[0m08:17:29.487155 [debug] [MainThread]: Acquiring new duckdb connection 'master'
+[0m08:17:29.500447 [debug] [ThreadPool]: Acquiring new duckdb connection 'list_personal_finance'
+[0m08:17:29.641427 [debug] [ThreadPool]: Using duckdb connection "list_personal_finance"
+[0m08:17:29.642424 [debug] [ThreadPool]: On list_personal_finance: /* {"app": "dbt", "dbt_version": "1.11.2", "profile_name": "personal_finance_tracker", "target_name": "dev", "connection_name": "list_personal_finance"} */
+
+    
+    select schema_name
+    from system.information_schema.schemata
+    
+    where lower(catalog_name) = '"personal_finance"'
+    
+  
+  
+[0m08:17:29.643421 [debug] [ThreadPool]: Opening a new connection, currently in state init
+[0m08:17:29.723239 [debug] [ThreadPool]: SQL status: OK in 0.080 seconds
+[0m08:17:29.726238 [debug] [ThreadPool]: On list_personal_finance: Close
+[0m08:17:29.727237 [debug] [ThreadPool]: Re-using an available connection from the pool (formerly list_personal_finance, now create_personal_finance_main)
+[0m08:17:29.728233 [debug] [ThreadPool]: Creating schema "database: "personal_finance"
+schema: "main"
+"
+[0m08:17:29.739206 [debug] [ThreadPool]: Using duckdb connection "create_personal_finance_main"
+[0m08:17:29.740205 [debug] [ThreadPool]: On create_personal_finance_main: /* {"app": "dbt", "dbt_version": "1.11.2", "profile_name": "personal_finance_tracker", "target_name": "dev", "connection_name": "create_personal_finance_main"} */
+
+    
+        select type from duckdb_databases()
+        where lower(database_name)='personal_finance'
+        and type='sqlite'
+    
+  
+[0m08:17:29.740205 [debug] [ThreadPool]: Opening a new connection, currently in state closed
+[0m08:17:29.743234 [debug] [ThreadPool]: SQL status: OK in 0.003 seconds
+[0m08:17:29.745188 [debug] [ThreadPool]: Using duckdb connection "create_personal_finance_main"
+[0m08:17:29.746185 [debug] [ThreadPool]: On create_personal_finance_main: BEGIN
+[0m08:17:29.747183 [debug] [ThreadPool]: SQL status: OK in 0.000 seconds
+[0m08:17:29.748180 [debug] [ThreadPool]: Using duckdb connection "create_personal_finance_main"
+[0m08:17:29.749177 [debug] [ThreadPool]: On create_personal_finance_main: /* {"app": "dbt", "dbt_version": "1.11.2", "profile_name": "personal_finance_tracker", "target_name": "dev", "connection_name": "create_personal_finance_main"} */
+
+    
+    
+        create schema if not exists "personal_finance"."main"
+    
+[0m08:17:29.752335 [debug] [ThreadPool]: SQL status: OK in 0.002 seconds
+[0m08:17:29.754099 [debug] [ThreadPool]: On create_personal_finance_main: COMMIT
+[0m08:17:29.755098 [debug] [ThreadPool]: Using duckdb connection "create_personal_finance_main"
+[0m08:17:29.756096 [debug] [ThreadPool]: On create_personal_finance_main: COMMIT
+[0m08:17:29.757094 [debug] [ThreadPool]: SQL status: OK in 0.000 seconds
+[0m08:17:29.758089 [debug] [ThreadPool]: On create_personal_finance_main: Close
+[0m08:17:29.760782 [debug] [ThreadPool]: Acquiring new duckdb connection 'list_personal_finance_main'
+[0m08:17:29.769799 [debug] [ThreadPool]: Using duckdb connection "list_personal_finance_main"
+[0m08:17:29.770795 [debug] [ThreadPool]: On list_personal_finance_main: BEGIN
+[0m08:17:29.771760 [debug] [ThreadPool]: Opening a new connection, currently in state init
+[0m08:17:29.773752 [debug] [ThreadPool]: SQL status: OK in 0.001 seconds
+[0m08:17:29.773752 [debug] [ThreadPool]: Using duckdb connection "list_personal_finance_main"
+[0m08:17:29.774857 [debug] [ThreadPool]: On list_personal_finance_main: /* {"app": "dbt", "dbt_version": "1.11.2", "profile_name": "personal_finance_tracker", "target_name": "dev", "connection_name": "list_personal_finance_main"} */
+select
+      'personal_finance' as database,
+      table_name as name,
+      table_schema as schema,
+      CASE table_type
+        WHEN 'BASE TABLE' THEN 'table'
+        WHEN 'VIEW' THEN 'view'
+        WHEN 'LOCAL TEMPORARY' THEN 'table'
+        END as type
+    from system.information_schema.tables
+    where lower(table_schema) = 'main'
+    and lower(table_catalog) = 'personal_finance'
+  
+[0m08:17:29.817930 [debug] [ThreadPool]: SQL status: OK in 0.042 seconds
+[0m08:17:29.819928 [debug] [ThreadPool]: On list_personal_finance_main: ROLLBACK
+[0m08:17:29.822921 [debug] [ThreadPool]: Failed to rollback 'list_personal_finance_main'
+[0m08:17:29.822921 [debug] [ThreadPool]: On list_personal_finance_main: Close
+[0m08:17:29.826031 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'runnable_timing', 'label': 'd476112d-f231-4995-a5dd-4174224cef7f', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x0000018D0548FA10>]}
+[0m08:17:29.827067 [debug] [MainThread]: Using duckdb connection "master"
+[0m08:17:29.828026 [debug] [MainThread]: On master: BEGIN
+[0m08:17:29.828026 [debug] [MainThread]: Opening a new connection, currently in state init
+[0m08:17:29.830023 [debug] [MainThread]: SQL status: OK in 0.001 seconds
+[0m08:17:29.831022 [debug] [MainThread]: On master: COMMIT
+[0m08:17:29.831022 [debug] [MainThread]: Using duckdb connection "master"
+[0m08:17:29.832016 [debug] [MainThread]: On master: COMMIT
+[0m08:17:29.834017 [debug] [MainThread]: SQL status: OK in 0.000 seconds
+[0m08:17:29.834017 [debug] [MainThread]: On master: Close
+[0m08:17:29.847950 [debug] [Thread-1 (]: Began running node model.personal_finance_tracker.stg_transactions
+[0m08:17:29.848952 [info ] [Thread-1 (]: 1 of 2 START sql view model main.stg_transactions .............................. [RUN]
+[0m08:17:29.850947 [debug] [Thread-1 (]: Acquiring new duckdb connection 'model.personal_finance_tracker.stg_transactions'
+[0m08:17:29.851943 [debug] [Thread-1 (]: Began compiling node model.personal_finance_tracker.stg_transactions
+[0m08:17:29.868934 [debug] [Thread-1 (]: Writing injected SQL for node "model.personal_finance_tracker.stg_transactions"
+[0m08:17:29.870894 [debug] [Thread-1 (]: Began executing node model.personal_finance_tracker.stg_transactions
+[0m08:17:29.917437 [debug] [Thread-1 (]: Writing runtime sql for node "model.personal_finance_tracker.stg_transactions"
+[0m08:17:29.919431 [debug] [Thread-1 (]: Using duckdb connection "model.personal_finance_tracker.stg_transactions"
+[0m08:17:29.920430 [debug] [Thread-1 (]: On model.personal_finance_tracker.stg_transactions: BEGIN
+[0m08:17:29.921426 [debug] [Thread-1 (]: Opening a new connection, currently in state init
+[0m08:17:29.923424 [debug] [Thread-1 (]: SQL status: OK in 0.002 seconds
+[0m08:17:29.924455 [debug] [Thread-1 (]: Using duckdb connection "model.personal_finance_tracker.stg_transactions"
+[0m08:17:29.925573 [debug] [Thread-1 (]: On model.personal_finance_tracker.stg_transactions: /* {"app": "dbt", "dbt_version": "1.11.2", "profile_name": "personal_finance_tracker", "target_name": "dev", "node_id": "model.personal_finance_tracker.stg_transactions"} */
+
+  
+  create view "personal_finance"."main"."stg_transactions__dbt_tmp" as (
+    -- Staging layer: Clean and standardize raw transaction data
+
+-- Focus: Unify merchant names (Starbucks/Dunkin variants)
+
+with source_data as (
+    select * from "personal_finance"."main"."raw_bank_transactions"
+),
+
+cleaned as (
+    select
+        txn_id,
+        date::date as transaction_date,
+        
+        -- Unify merchant names using CASE logic
+        case
+            when upper(description) like '%STARBUCKS%' then 'Starbucks'
+            when upper(description) like '%DUNKIN%' then 'Dunkin'
+            when upper(description) like '%NETFLIX%' then 'Netflix'
+            when upper(description) like '%AMAZON%' then 'Amazon'
+            when upper(description) like '%WALMART%' then 'Walmart'
+            when upper(description) like '%RENT%' then 'Rent'
+            when upper(description) like '%SALARY%' then 'Salary'
+            else description
+        end as merchant_clean,
+        
+        description as original_description,
+        amount,
+        account_type,
+        
+        -- Add metadata
+        current_timestamp as loaded_at
+    from source_data
+)
+
+select * from cleaned
+  );
+
+[0m08:17:29.930417 [debug] [Thread-1 (]: SQL status: OK in 0.013 seconds
+[0m08:17:29.951509 [debug] [Thread-1 (]: Using duckdb connection "model.personal_finance_tracker.stg_transactions"
+[0m08:17:29.952508 [debug] [Thread-1 (]: On model.personal_finance_tracker.stg_transactions: /* {"app": "dbt", "dbt_version": "1.11.2", "profile_name": "personal_finance_tracker", "target_name": "dev", "node_id": "model.personal_finance_tracker.stg_transactions"} */
+alter view "personal_finance"."main"."stg_transactions" rename to "stg_transactions__dbt_backup"
+[0m08:17:29.953690 [debug] [Thread-1 (]: SQL status: OK in 0.001 seconds
+[0m08:17:29.959675 [debug] [Thread-1 (]: Using duckdb connection "model.personal_finance_tracker.stg_transactions"
+[0m08:17:29.960674 [debug] [Thread-1 (]: On model.personal_finance_tracker.stg_transactions: /* {"app": "dbt", "dbt_version": "1.11.2", "profile_name": "personal_finance_tracker", "target_name": "dev", "node_id": "model.personal_finance_tracker.stg_transactions"} */
+alter view "personal_finance"."main"."stg_transactions__dbt_tmp" rename to "stg_transactions"
+[0m08:17:29.962667 [debug] [Thread-1 (]: SQL status: OK in 0.001 seconds
+[0m08:17:29.984956 [debug] [Thread-1 (]: On model.personal_finance_tracker.stg_transactions: COMMIT
+[0m08:17:29.985951 [debug] [Thread-1 (]: Using duckdb connection "model.personal_finance_tracker.stg_transactions"
+[0m08:17:29.986927 [debug] [Thread-1 (]: On model.personal_finance_tracker.stg_transactions: COMMIT
+[0m08:17:29.992899 [debug] [Thread-1 (]: SQL status: OK in 0.006 seconds
+[0m08:17:30.005866 [debug] [Thread-1 (]: Using duckdb connection "model.personal_finance_tracker.stg_transactions"
+[0m08:17:30.006864 [debug] [Thread-1 (]: On model.personal_finance_tracker.stg_transactions: /* {"app": "dbt", "dbt_version": "1.11.2", "profile_name": "personal_finance_tracker", "target_name": "dev", "node_id": "model.personal_finance_tracker.stg_transactions"} */
+
+      drop view if exists "personal_finance"."main"."stg_transactions__dbt_backup" cascade
+    
+[0m08:17:30.009854 [debug] [Thread-1 (]: SQL status: OK in 0.002 seconds
+[0m08:17:30.014844 [debug] [Thread-1 (]: On model.personal_finance_tracker.stg_transactions: Close
+[0m08:17:30.018861 [debug] [Thread-1 (]: Sending event: {'category': 'dbt', 'action': 'run_model', 'label': 'd476112d-f231-4995-a5dd-4174224cef7f', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x0000018D0583BF90>]}
+[0m08:17:30.019898 [info ] [Thread-1 (]: 1 of 2 OK created sql view model main.stg_transactions ......................... [[32mOK[0m in 0.17s]
+[0m08:17:30.021856 [debug] [Thread-1 (]: Finished running node model.personal_finance_tracker.stg_transactions
+[0m08:17:30.023851 [debug] [Thread-3 (]: Began running node model.personal_finance_tracker.fct_burn_rate
+[0m08:17:30.025847 [info ] [Thread-3 (]: 2 of 2 START sql table model main.fct_burn_rate ................................ [RUN]
+[0m08:17:30.027893 [debug] [Thread-3 (]: Acquiring new duckdb connection 'model.personal_finance_tracker.fct_burn_rate'
+[0m08:17:30.028877 [debug] [Thread-3 (]: Began compiling node model.personal_finance_tracker.fct_burn_rate
+[0m08:17:30.036855 [debug] [Thread-3 (]: Writing injected SQL for node "model.personal_finance_tracker.fct_burn_rate"
+[0m08:17:30.038811 [debug] [Thread-3 (]: Began executing node model.personal_finance_tracker.fct_burn_rate
+[0m08:17:30.085582 [debug] [Thread-3 (]: Writing runtime sql for node "model.personal_finance_tracker.fct_burn_rate"
+[0m08:17:30.086578 [debug] [Thread-3 (]: Using duckdb connection "model.personal_finance_tracker.fct_burn_rate"
+[0m08:17:30.088574 [debug] [Thread-3 (]: On model.personal_finance_tracker.fct_burn_rate: BEGIN
+[0m08:17:30.089571 [debug] [Thread-3 (]: Opening a new connection, currently in state init
+[0m08:17:30.090569 [debug] [Thread-3 (]: SQL status: OK in 0.001 seconds
+[0m08:17:30.091565 [debug] [Thread-3 (]: Using duckdb connection "model.personal_finance_tracker.fct_burn_rate"
+[0m08:17:30.093561 [debug] [Thread-3 (]: On model.personal_finance_tracker.fct_burn_rate: /* {"app": "dbt", "dbt_version": "1.11.2", "profile_name": "personal_finance_tracker", "target_name": "dev", "node_id": "model.personal_finance_tracker.fct_burn_rate"} */
+
+  
+    
+    
+
+    create  table
+      "personal_finance"."main"."fct_burn_rate__dbt_tmp"
+  
+    as (
+      -- Marts layer: Calculate daily burn rate with rolling averages
+-- Focus: Window functions for trend analysis
+
+with daily_spend as (
+    select
+        transaction_date,
+        sum(amount) as daily_total,
+        count(*) as transaction_count
+    from "personal_finance"."main"."stg_transactions"
+    group by transaction_date
+),
+
+burn_rate_calc as (
+    select
+        transaction_date,
+        daily_total,
+        transaction_count,
+        
+        -- 7-day rolling average (window function #1)
+        avg(daily_total) over (
+            order by transaction_date
+            rows between 6 preceding and current row
+        ) as avg_7day_spend,
+        
+        -- Cumulative spend (window function #2)
+        sum(daily_total) over (
+            order by transaction_date
+            rows between unbounded preceding and current row
+        ) as cumulative_spend,
+        
+        -- Running transaction count (window function #3)
+        sum(transaction_count) over (
+            order by transaction_date
+            rows between unbounded preceding and current row
+        ) as cumulative_transactions,
+        
+        -- Day-over-day change (window function #4)
+        daily_total - lag(daily_total, 1) over (
+            order by transaction_date
+        ) as day_over_day_change,
+        
+        -- Percentage change from previous day (window function #5)
+        round(
+            ((daily_total - lag(daily_total, 1) over (order by transaction_date)) 
+            / nullif(lag(daily_total, 1) over (order by transaction_date), 0)) * 100,
+            2
+        ) as pct_change_from_prev_day,
+        
+        -- Rank days by spending (window function #6)
+        rank() over (order by daily_total desc) as spend_rank
+        
+    from daily_spend
+)
+
+select * from burn_rate_calc
+order by transaction_date
+    );
+  
+  
+[0m08:17:30.134805 [debug] [Thread-3 (]: SQL status: OK in 0.040 seconds
+[0m08:17:30.143780 [debug] [Thread-3 (]: Using duckdb connection "model.personal_finance_tracker.fct_burn_rate"
+[0m08:17:30.144777 [debug] [Thread-3 (]: On model.personal_finance_tracker.fct_burn_rate: /* {"app": "dbt", "dbt_version": "1.11.2", "profile_name": "personal_finance_tracker", "target_name": "dev", "node_id": "model.personal_finance_tracker.fct_burn_rate"} */
+
+    SELECT index_name
+    FROM duckdb_indexes()
+    WHERE schema_name = 'main'
+      AND table_name = 'fct_burn_rate'
+  
+[0m08:17:30.146774 [debug] [Thread-3 (]: SQL status: OK in 0.001 seconds
+[0m08:17:30.149765 [debug] [Thread-3 (]: Using duckdb connection "model.personal_finance_tracker.fct_burn_rate"
+[0m08:17:30.150763 [debug] [Thread-3 (]: On model.personal_finance_tracker.fct_burn_rate: /* {"app": "dbt", "dbt_version": "1.11.2", "profile_name": "personal_finance_tracker", "target_name": "dev", "node_id": "model.personal_finance_tracker.fct_burn_rate"} */
+
+    SELECT COUNT(*) as remaining_indexes
+    FROM duckdb_indexes()
+    WHERE schema_name = 'main'
+      AND table_name = 'fct_burn_rate'
+  
+[0m08:17:30.152764 [debug] [Thread-3 (]: SQL status: OK in 0.002 seconds
+[0m08:17:30.159737 [debug] [Thread-3 (]: Using duckdb connection "model.personal_finance_tracker.fct_burn_rate"
+[0m08:17:30.160735 [debug] [Thread-3 (]: On model.personal_finance_tracker.fct_burn_rate: /* {"app": "dbt", "dbt_version": "1.11.2", "profile_name": "personal_finance_tracker", "target_name": "dev", "node_id": "model.personal_finance_tracker.fct_burn_rate"} */
+alter table "personal_finance"."main"."fct_burn_rate" rename to "fct_burn_rate__dbt_backup"
+[0m08:17:30.162731 [debug] [Thread-3 (]: SQL status: OK in 0.001 seconds
+[0m08:17:30.166719 [debug] [Thread-3 (]: Using duckdb connection "model.personal_finance_tracker.fct_burn_rate"
+[0m08:17:30.167716 [debug] [Thread-3 (]: On model.personal_finance_tracker.fct_burn_rate: /* {"app": "dbt", "dbt_version": "1.11.2", "profile_name": "personal_finance_tracker", "target_name": "dev", "node_id": "model.personal_finance_tracker.fct_burn_rate"} */
+alter table "personal_finance"."main"."fct_burn_rate__dbt_tmp" rename to "fct_burn_rate"
+[0m08:17:30.169721 [debug] [Thread-3 (]: SQL status: OK in 0.001 seconds
+[0m08:17:30.177689 [debug] [Thread-3 (]: On model.personal_finance_tracker.fct_burn_rate: COMMIT
+[0m08:17:30.178686 [debug] [Thread-3 (]: Using duckdb connection "model.personal_finance_tracker.fct_burn_rate"
+[0m08:17:30.180682 [debug] [Thread-3 (]: On model.personal_finance_tracker.fct_burn_rate: COMMIT
+[0m08:17:30.184267 [debug] [Thread-3 (]: SQL status: OK in 0.003 seconds
+[0m08:17:30.190292 [debug] [Thread-3 (]: Using duckdb connection "model.personal_finance_tracker.fct_burn_rate"
+[0m08:17:30.191251 [debug] [Thread-3 (]: On model.personal_finance_tracker.fct_burn_rate: /* {"app": "dbt", "dbt_version": "1.11.2", "profile_name": "personal_finance_tracker", "target_name": "dev", "node_id": "model.personal_finance_tracker.fct_burn_rate"} */
+
+      drop table if exists "personal_finance"."main"."fct_burn_rate__dbt_backup" cascade
+    
+[0m08:17:30.194166 [debug] [Thread-3 (]: SQL status: OK in 0.002 seconds
+[0m08:17:30.196196 [debug] [Thread-3 (]: On model.personal_finance_tracker.fct_burn_rate: Close
+[0m08:17:30.197195 [debug] [Thread-3 (]: Sending event: {'category': 'dbt', 'action': 'run_model', 'label': 'd476112d-f231-4995-a5dd-4174224cef7f', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x0000018D059182D0>]}
+[0m08:17:30.199280 [info ] [Thread-3 (]: 2 of 2 OK created sql table model main.fct_burn_rate ........................... [[32mOK[0m in 0.17s]
+[0m08:17:30.201148 [debug] [Thread-3 (]: Finished running node model.personal_finance_tracker.fct_burn_rate
+[0m08:17:30.203141 [debug] [MainThread]: Using duckdb connection "master"
+[0m08:17:30.204357 [debug] [MainThread]: On master: BEGIN
+[0m08:17:30.205392 [debug] [MainThread]: Opening a new connection, currently in state closed
+[0m08:17:30.206352 [debug] [MainThread]: SQL status: OK in 0.001 seconds
+[0m08:17:30.207387 [debug] [MainThread]: On master: COMMIT
+[0m08:17:30.208384 [debug] [MainThread]: Using duckdb connection "master"
+[0m08:17:30.209381 [debug] [MainThread]: On master: COMMIT
+[0m08:17:30.210342 [debug] [MainThread]: SQL status: OK in 0.000 seconds
+[0m08:17:30.211345 [debug] [MainThread]: On master: Close
+[0m08:17:30.213335 [debug] [MainThread]: Connection 'master' was properly closed.
+[0m08:17:30.214331 [debug] [MainThread]: Connection 'create_personal_finance_main' was properly closed.
+[0m08:17:30.216328 [debug] [MainThread]: Connection 'list_personal_finance_main' was properly closed.
+[0m08:17:30.218325 [debug] [MainThread]: Connection 'model.personal_finance_tracker.stg_transactions' was properly closed.
+[0m08:17:30.219322 [debug] [MainThread]: Connection 'model.personal_finance_tracker.fct_burn_rate' was properly closed.
+[0m08:17:30.221313 [info ] [MainThread]: 
+[0m08:17:30.222309 [info ] [MainThread]: Finished running 1 table model, 1 view model in 0 hours 0 minutes and 0.73 seconds (0.73s).
+[0m08:17:30.224305 [debug] [MainThread]: Command end result
+[0m08:17:30.277774 [debug] [MainThread]: Wrote artifact WritableManifest to C:\kev\personal_finance_tracker\personal_finance_tracker\target\manifest.json
+[0m08:17:30.282732 [debug] [MainThread]: Wrote artifact SemanticManifest to C:\kev\personal_finance_tracker\personal_finance_tracker\target\semantic_manifest.json
+[0m08:17:30.293705 [debug] [MainThread]: Wrote artifact RunExecutionResult to C:\kev\personal_finance_tracker\personal_finance_tracker\target\run_results.json
+[0m08:17:30.295698 [info ] [MainThread]: 
+[0m08:17:30.296695 [info ] [MainThread]: [32mCompleted successfully[0m
+[0m08:17:30.297692 [info ] [MainThread]: 
+[0m08:17:30.299689 [info ] [MainThread]: Done. PASS=2 WARN=0 ERROR=0 SKIP=0 NO-OP=0 TOTAL=2
+[0m08:17:30.300684 [warn ] [MainThread]: [[33mWARNING[0m][DeprecationsSummary]: Deprecated functionality
+Summary of encountered deprecations:
+- MissingArgumentsPropertyInGenericTestDeprecation: 1 occurrence
+To see all deprecation instances instead of just the first occurrence of each,
+run command again with the `--show-all-deprecations` flag. You may also need to
+run with `--no-partial-parse` as some deprecations are only encountered during
+parsing.
+[0m08:17:30.303992 [debug] [MainThread]: Command `dbt run` succeeded at 08:17:30.303992 after 3.23 seconds
+[0m08:17:30.305993 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'invocation', 'label': 'end', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x0000018D7CD0D010>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x0000018D7CF59B90>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x0000018D7D238AD0>]}
+[0m08:17:30.306985 [debug] [MainThread]: Flushing usage events
+[0m08:17:31.324090 [debug] [MainThread]: An error was encountered while trying to flush usage events
+[0m08:18:25.646642 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'invocation', 'label': 'start', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x000002BC7FA6D990>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x000002BC7FCE4C10>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x000002BC7FCE4A90>]}
+
+
+============================== 08:18:25.654074 | 0d5d4822-32b9-4269-b28b-61f2c7d60cd0 ==============================
+[0m08:18:25.654074 [info ] [MainThread]: Running with dbt=1.11.2
+[0m08:18:25.656070 [debug] [MainThread]: running dbt with arguments {'static_parser': 'True', 'no_print': 'None', 'version_check': 'True', 'target_path': 'None', 'warn_error_options': 'WarnErrorOptionsV2(error=[], warn=[], silence=[])', 'printer_width': '80', 'write_json': 'True', 'introspect': 'True', 'log_cache_events': 'False', 'empty': 'None', 'cache_selected_only': 'False', 'fail_fast': 'False', 'debug': 'False', 'log_format': 'default', 'profiles_dir': 'C:\\Users\\Evans Moseti\\.dbt', 'send_anonymous_usage_stats': 'True', 'quiet': 'False', 'warn_error': 'None', 'partial_parse': 'True', 'invocation_command': 'dbt test', 'use_colors': 'True', 'indirect_selection': 'eager', 'use_experimental_parser': 'False', 'log_path': 'C:\\kev\\personal_finance_tracker\\personal_finance_tracker\\logs'}
+[0m08:18:26.125621 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'project_id', 'label': '0d5d4822-32b9-4269-b28b-61f2c7d60cd0', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x000002BC7FD91410>]}
+[0m08:18:26.241499 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'adapter_info', 'label': '0d5d4822-32b9-4269-b28b-61f2c7d60cd0', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x000002BC7C520350>]}
+[0m08:18:26.246978 [info ] [MainThread]: Registered adapter: duckdb=1.10.0
+[0m08:18:26.713459 [debug] [MainThread]: checksum: 3d40d8bbe1bef07db1c24822f2dbfff8bc07f2a48ed4fe2658a40653aec0b54b, vars: {}, profile: , target: , version: 1.11.2
+[0m08:18:27.039976 [debug] [MainThread]: Partial parsing enabled: 0 files deleted, 0 files added, 0 files changed.
+[0m08:18:27.040935 [debug] [MainThread]: Nothing changed, skipping partial parsing.
+[0m08:18:27.040935 [debug] [MainThread]: Partial parsing enabled, no changes found, skipping parsing
+[0m08:18:27.125951 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'load_project', 'label': '0d5d4822-32b9-4269-b28b-61f2c7d60cd0', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x000002BC01255AD0>]}
+[0m08:18:27.377241 [debug] [MainThread]: Wrote artifact WritableManifest to C:\kev\personal_finance_tracker\personal_finance_tracker\target\manifest.json
+[0m08:18:27.390307 [debug] [MainThread]: Wrote artifact SemanticManifest to C:\kev\personal_finance_tracker\personal_finance_tracker\target\semantic_manifest.json
+[0m08:18:27.513272 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'resource_counts', 'label': '0d5d4822-32b9-4269-b28b-61f2c7d60cd0', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x000002BC014F2090>]}
+[0m08:18:27.515266 [info ] [MainThread]: Found 1 seed, 2 models, 7 data tests, 472 macros
+[0m08:18:27.517260 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'runnable_timing', 'label': '0d5d4822-32b9-4269-b28b-61f2c7d60cd0', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x000002BC7FD91350>]}
+[0m08:18:27.521251 [info ] [MainThread]: 
+[0m08:18:27.523247 [info ] [MainThread]: Concurrency: 4 threads (target='dev')
+[0m08:18:27.525239 [info ] [MainThread]: 
+[0m08:18:27.527234 [debug] [MainThread]: Acquiring new duckdb connection 'master'
+[0m08:18:27.543637 [debug] [ThreadPool]: Acquiring new duckdb connection 'list_personal_finance_main'
+[0m08:18:27.731864 [debug] [ThreadPool]: Using duckdb connection "list_personal_finance_main"
+[0m08:18:27.732892 [debug] [ThreadPool]: On list_personal_finance_main: BEGIN
+[0m08:18:27.733859 [debug] [ThreadPool]: Opening a new connection, currently in state init
+[0m08:18:27.783538 [debug] [ThreadPool]: SQL status: OK in 0.050 seconds
+[0m08:18:27.785533 [debug] [ThreadPool]: Using duckdb connection "list_personal_finance_main"
+[0m08:18:27.787528 [debug] [ThreadPool]: On list_personal_finance_main: /* {"app": "dbt", "dbt_version": "1.11.2", "profile_name": "personal_finance_tracker", "target_name": "dev", "connection_name": "list_personal_finance_main"} */
+select
+      'personal_finance' as database,
+      table_name as name,
+      table_schema as schema,
+      CASE table_type
+        WHEN 'BASE TABLE' THEN 'table'
+        WHEN 'VIEW' THEN 'view'
+        WHEN 'LOCAL TEMPORARY' THEN 'table'
+        END as type
+    from system.information_schema.tables
+    where lower(table_schema) = 'main'
+    and lower(table_catalog) = 'personal_finance'
+  
+[0m08:18:27.816448 [debug] [ThreadPool]: SQL status: OK in 0.028 seconds
+[0m08:18:27.821436 [debug] [ThreadPool]: On list_personal_finance_main: ROLLBACK
+[0m08:18:27.824467 [debug] [ThreadPool]: Failed to rollback 'list_personal_finance_main'
+[0m08:18:27.824467 [debug] [ThreadPool]: On list_personal_finance_main: Close
+[0m08:18:27.826592 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'runnable_timing', 'label': '0d5d4822-32b9-4269-b28b-61f2c7d60cd0', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x000002BC011C4990>]}
+[0m08:18:27.828116 [debug] [MainThread]: Using duckdb connection "master"
+[0m08:18:27.829114 [debug] [MainThread]: On master: BEGIN
+[0m08:18:27.829114 [debug] [MainThread]: Opening a new connection, currently in state init
+[0m08:18:27.831110 [debug] [MainThread]: SQL status: OK in 0.001 seconds
+[0m08:18:27.832106 [debug] [MainThread]: On master: COMMIT
+[0m08:18:27.833104 [debug] [MainThread]: Using duckdb connection "master"
+[0m08:18:27.834101 [debug] [MainThread]: On master: COMMIT
+[0m08:18:27.835098 [debug] [MainThread]: SQL status: OK in 0.000 seconds
+[0m08:18:27.836132 [debug] [MainThread]: On master: Close
+[0m08:18:27.843076 [debug] [Thread-1 (]: Began running node test.personal_finance_tracker.accepted_values_stg_transactions_account_type__Checking__Credit_Card.d5b67bc9f6
+[0m08:18:27.843076 [debug] [Thread-2 (]: Began running node test.personal_finance_tracker.not_null_stg_transactions_account_type.ad1230bce8
+[0m08:18:27.844110 [debug] [Thread-3 (]: Began running node test.personal_finance_tracker.not_null_stg_transactions_amount.3629b5421e
+[0m08:18:27.844110 [debug] [Thread-4 (]: Began running node test.personal_finance_tracker.not_null_stg_transactions_merchant_clean.0e5c23f37e
+[0m08:18:27.845070 [info ] [Thread-1 (]: 1 of 7 START test accepted_values_stg_transactions_account_type__Checking__Credit_Card  [RUN]
+[0m08:18:27.846073 [info ] [Thread-2 (]: 2 of 7 START test not_null_stg_transactions_account_type ....................... [RUN]
+[0m08:18:27.848065 [info ] [Thread-3 (]: 3 of 7 START test not_null_stg_transactions_amount ............................. [RUN]
+[0m08:18:27.851250 [debug] [Thread-1 (]: Acquiring new duckdb connection 'test.personal_finance_tracker.accepted_values_stg_transactions_account_type__Checking__Credit_Card.d5b67bc9f6'
+[0m08:18:27.849063 [info ] [Thread-4 (]: 4 of 7 START test not_null_stg_transactions_merchant_clean ..................... [RUN]
+[0m08:18:27.853245 [debug] [Thread-2 (]: Acquiring new duckdb connection 'test.personal_finance_tracker.not_null_stg_transactions_account_type.ad1230bce8'
+[0m08:18:27.854244 [debug] [Thread-3 (]: Acquiring new duckdb connection 'test.personal_finance_tracker.not_null_stg_transactions_amount.3629b5421e'
+[0m08:18:27.855239 [debug] [Thread-1 (]: Began compiling node test.personal_finance_tracker.accepted_values_stg_transactions_account_type__Checking__Credit_Card.d5b67bc9f6
+[0m08:18:27.857235 [debug] [Thread-4 (]: Acquiring new duckdb connection 'test.personal_finance_tracker.not_null_stg_transactions_merchant_clean.0e5c23f37e'
+[0m08:18:27.858232 [debug] [Thread-2 (]: Began compiling node test.personal_finance_tracker.not_null_stg_transactions_account_type.ad1230bce8
+[0m08:18:27.859265 [debug] [Thread-3 (]: Began compiling node test.personal_finance_tracker.not_null_stg_transactions_amount.3629b5421e
+[0m08:18:27.903399 [debug] [Thread-1 (]: Writing injected SQL for node "test.personal_finance_tracker.accepted_values_stg_transactions_account_type__Checking__Credit_Card.d5b67bc9f6"
+[0m08:18:27.904436 [debug] [Thread-4 (]: Began compiling node test.personal_finance_tracker.not_null_stg_transactions_merchant_clean.0e5c23f37e
+[0m08:18:27.918399 [debug] [Thread-2 (]: Writing injected SQL for node "test.personal_finance_tracker.not_null_stg_transactions_account_type.ad1230bce8"
+[0m08:18:27.925343 [debug] [Thread-3 (]: Writing injected SQL for node "test.personal_finance_tracker.not_null_stg_transactions_amount.3629b5421e"
+[0m08:18:27.936312 [debug] [Thread-4 (]: Writing injected SQL for node "test.personal_finance_tracker.not_null_stg_transactions_merchant_clean.0e5c23f37e"
+[0m08:18:27.937310 [debug] [Thread-1 (]: Began executing node test.personal_finance_tracker.accepted_values_stg_transactions_account_type__Checking__Credit_Card.d5b67bc9f6
+[0m08:18:27.967439 [debug] [Thread-1 (]: Writing runtime sql for node "test.personal_finance_tracker.accepted_values_stg_transactions_account_type__Checking__Credit_Card.d5b67bc9f6"
+[0m08:18:27.970431 [debug] [Thread-1 (]: Using duckdb connection "test.personal_finance_tracker.accepted_values_stg_transactions_account_type__Checking__Credit_Card.d5b67bc9f6"
+[0m08:18:27.971429 [debug] [Thread-1 (]: On test.personal_finance_tracker.accepted_values_stg_transactions_account_type__Checking__Credit_Card.d5b67bc9f6: BEGIN
+[0m08:18:27.972427 [debug] [Thread-1 (]: Opening a new connection, currently in state init
+[0m08:18:27.973460 [debug] [Thread-1 (]: SQL status: OK in 0.002 seconds
+[0m08:18:27.974457 [debug] [Thread-1 (]: Using duckdb connection "test.personal_finance_tracker.accepted_values_stg_transactions_account_type__Checking__Credit_Card.d5b67bc9f6"
+[0m08:18:27.975456 [debug] [Thread-1 (]: On test.personal_finance_tracker.accepted_values_stg_transactions_account_type__Checking__Credit_Card.d5b67bc9f6: /* {"app": "dbt", "dbt_version": "1.11.2", "profile_name": "personal_finance_tracker", "target_name": "dev", "node_id": "test.personal_finance_tracker.accepted_values_stg_transactions_account_type__Checking__Credit_Card.d5b67bc9f6"} */
+
+    select
+      count(*) as failures,
+      count(*) != 0 as should_warn,
+      count(*) != 0 as should_error
+    from (
+      
+    
+  
+    
+    
+
+with all_values as (
+
+    select
+        account_type as value_field,
+        count(*) as n_records
+
+    from "personal_finance"."main"."stg_transactions"
+    group by account_type
+
+)
+
+select *
+from all_values
+where value_field not in (
+    'Checking','Credit Card'
+)
+
+
+
+  
+  
+      
+    ) dbt_internal_test
+[0m08:18:27.996100 [debug] [Thread-2 (]: Began executing node test.personal_finance_tracker.not_null_stg_transactions_account_type.ad1230bce8
+[0m08:18:28.005345 [debug] [Thread-2 (]: Writing runtime sql for node "test.personal_finance_tracker.not_null_stg_transactions_account_type.ad1230bce8"
+[0m08:18:28.006347 [debug] [Thread-4 (]: Began executing node test.personal_finance_tracker.not_null_stg_transactions_merchant_clean.0e5c23f37e
+[0m08:18:28.007377 [debug] [Thread-1 (]: SQL status: OK in 0.031 seconds
+[0m08:18:28.008338 [debug] [Thread-3 (]: Began executing node test.personal_finance_tracker.not_null_stg_transactions_amount.3629b5421e
+[0m08:18:28.014321 [debug] [Thread-4 (]: Writing runtime sql for node "test.personal_finance_tracker.not_null_stg_transactions_merchant_clean.0e5c23f37e"
+[0m08:18:28.016316 [debug] [Thread-2 (]: Using duckdb connection "test.personal_finance_tracker.not_null_stg_transactions_account_type.ad1230bce8"
+[0m08:18:28.023333 [debug] [Thread-1 (]: On test.personal_finance_tracker.accepted_values_stg_transactions_account_type__Checking__Credit_Card.d5b67bc9f6: ROLLBACK
+[0m08:18:28.027287 [debug] [Thread-3 (]: Writing runtime sql for node "test.personal_finance_tracker.not_null_stg_transactions_amount.3629b5421e"
+[0m08:18:28.029510 [debug] [Thread-2 (]: On test.personal_finance_tracker.not_null_stg_transactions_account_type.ad1230bce8: BEGIN
+[0m08:18:28.030506 [debug] [Thread-4 (]: Using duckdb connection "test.personal_finance_tracker.not_null_stg_transactions_merchant_clean.0e5c23f37e"
+[0m08:18:28.032503 [debug] [Thread-1 (]: Failed to rollback 'test.personal_finance_tracker.accepted_values_stg_transactions_account_type__Checking__Credit_Card.d5b67bc9f6'
+[0m08:18:28.034571 [debug] [Thread-2 (]: Opening a new connection, currently in state init
+[0m08:18:28.035569 [debug] [Thread-4 (]: On test.personal_finance_tracker.not_null_stg_transactions_merchant_clean.0e5c23f37e: BEGIN
+[0m08:18:28.036571 [debug] [Thread-3 (]: Using duckdb connection "test.personal_finance_tracker.not_null_stg_transactions_amount.3629b5421e"
+[0m08:18:28.037567 [debug] [Thread-1 (]: On test.personal_finance_tracker.accepted_values_stg_transactions_account_type__Checking__Credit_Card.d5b67bc9f6: Close
+[0m08:18:28.039570 [debug] [Thread-2 (]: SQL status: OK in 0.006 seconds
+[0m08:18:28.040561 [debug] [Thread-4 (]: Opening a new connection, currently in state init
+[0m08:18:28.041554 [debug] [Thread-3 (]: On test.personal_finance_tracker.not_null_stg_transactions_amount.3629b5421e: BEGIN
+[0m08:18:28.044546 [debug] [Thread-2 (]: Using duckdb connection "test.personal_finance_tracker.not_null_stg_transactions_account_type.ad1230bce8"
+[0m08:18:28.043552 [info ] [Thread-1 (]: 1 of 7 PASS accepted_values_stg_transactions_account_type__Checking__Credit_Card  [[32mPASS[0m in 0.19s]
+[0m08:18:28.046541 [debug] [Thread-3 (]: Opening a new connection, currently in state init
+[0m08:18:28.047570 [debug] [Thread-4 (]: SQL status: OK in 0.007 seconds
+[0m08:18:28.053559 [debug] [Thread-4 (]: Using duckdb connection "test.personal_finance_tracker.not_null_stg_transactions_merchant_clean.0e5c23f37e"
+[0m08:18:28.049567 [debug] [Thread-1 (]: Finished running node test.personal_finance_tracker.accepted_values_stg_transactions_account_type__Checking__Credit_Card.d5b67bc9f6
+[0m08:18:28.052560 [debug] [Thread-3 (]: SQL status: OK in 0.005 seconds
+[0m08:18:28.048571 [debug] [Thread-2 (]: On test.personal_finance_tracker.not_null_stg_transactions_account_type.ad1230bce8: /* {"app": "dbt", "dbt_version": "1.11.2", "profile_name": "personal_finance_tracker", "target_name": "dev", "node_id": "test.personal_finance_tracker.not_null_stg_transactions_account_type.ad1230bce8"} */
+
+    select
+      count(*) as failures,
+      count(*) != 0 as should_warn,
+      count(*) != 0 as should_error
+    from (
+      
+    
+  
+    
+    
+
+
+
+select account_type
+from "personal_finance"."main"."stg_transactions"
+where account_type is null
+
+
+
+  
+  
+      
+    ) dbt_internal_test
+[0m08:18:28.055552 [debug] [Thread-4 (]: On test.personal_finance_tracker.not_null_stg_transactions_merchant_clean.0e5c23f37e: /* {"app": "dbt", "dbt_version": "1.11.2", "profile_name": "personal_finance_tracker", "target_name": "dev", "node_id": "test.personal_finance_tracker.not_null_stg_transactions_merchant_clean.0e5c23f37e"} */
+
+    select
+      count(*) as failures,
+      count(*) != 0 as should_warn,
+      count(*) != 0 as should_error
+    from (
+      
+    
+  
+    
+    
+
+
+
+select merchant_clean
+from "personal_finance"."main"."stg_transactions"
+where merchant_clean is null
+
+
+
+  
+  
+      
+    ) dbt_internal_test
+[0m08:18:28.058548 [debug] [Thread-1 (]: Began running node test.personal_finance_tracker.not_null_stg_transactions_transaction_date.353bde368c
+[0m08:18:28.059541 [debug] [Thread-3 (]: Using duckdb connection "test.personal_finance_tracker.not_null_stg_transactions_amount.3629b5421e"
+[0m08:18:28.063533 [debug] [Thread-3 (]: On test.personal_finance_tracker.not_null_stg_transactions_amount.3629b5421e: /* {"app": "dbt", "dbt_version": "1.11.2", "profile_name": "personal_finance_tracker", "target_name": "dev", "node_id": "test.personal_finance_tracker.not_null_stg_transactions_amount.3629b5421e"} */
+
+    select
+      count(*) as failures,
+      count(*) != 0 as should_warn,
+      count(*) != 0 as should_error
+    from (
+      
+    
+  
+    
+    
+
+
+
+select amount
+from "personal_finance"."main"."stg_transactions"
+where amount is null
+
+
+
+  
+  
+      
+    ) dbt_internal_test
+[0m08:18:28.062536 [info ] [Thread-1 (]: 5 of 7 START test not_null_stg_transactions_transaction_date ................... [RUN]
+[0m08:18:28.066524 [debug] [Thread-1 (]: Re-using an available connection from the pool (formerly test.personal_finance_tracker.accepted_values_stg_transactions_account_type__Checking__Credit_Card.d5b67bc9f6, now test.personal_finance_tracker.not_null_stg_transactions_transaction_date.353bde368c)
+[0m08:18:28.067522 [debug] [Thread-1 (]: Began compiling node test.personal_finance_tracker.not_null_stg_transactions_transaction_date.353bde368c
+[0m08:18:28.076656 [debug] [Thread-1 (]: Writing injected SQL for node "test.personal_finance_tracker.not_null_stg_transactions_transaction_date.353bde368c"
+[0m08:18:28.077744 [debug] [Thread-1 (]: Began executing node test.personal_finance_tracker.not_null_stg_transactions_transaction_date.353bde368c
+[0m08:18:28.085240 [debug] [Thread-1 (]: Writing runtime sql for node "test.personal_finance_tracker.not_null_stg_transactions_transaction_date.353bde368c"
+[0m08:18:28.086236 [debug] [Thread-2 (]: SQL status: OK in 0.026 seconds
+[0m08:18:28.088230 [debug] [Thread-4 (]: SQL status: OK in 0.027 seconds
+[0m08:18:28.088230 [debug] [Thread-3 (]: SQL status: OK in 0.023 seconds
+[0m08:18:28.092219 [debug] [Thread-2 (]: On test.personal_finance_tracker.not_null_stg_transactions_account_type.ad1230bce8: ROLLBACK
+[0m08:18:28.093216 [debug] [Thread-1 (]: Using duckdb connection "test.personal_finance_tracker.not_null_stg_transactions_transaction_date.353bde368c"
+[0m08:18:28.096207 [debug] [Thread-4 (]: On test.personal_finance_tracker.not_null_stg_transactions_merchant_clean.0e5c23f37e: ROLLBACK
+[0m08:18:28.099200 [debug] [Thread-3 (]: On test.personal_finance_tracker.not_null_stg_transactions_amount.3629b5421e: ROLLBACK
+[0m08:18:28.100197 [debug] [Thread-2 (]: Failed to rollback 'test.personal_finance_tracker.not_null_stg_transactions_account_type.ad1230bce8'
+[0m08:18:28.102193 [debug] [Thread-1 (]: On test.personal_finance_tracker.not_null_stg_transactions_transaction_date.353bde368c: BEGIN
+[0m08:18:28.104188 [debug] [Thread-4 (]: Failed to rollback 'test.personal_finance_tracker.not_null_stg_transactions_merchant_clean.0e5c23f37e'
+[0m08:18:28.106181 [debug] [Thread-3 (]: Failed to rollback 'test.personal_finance_tracker.not_null_stg_transactions_amount.3629b5421e'
+[0m08:18:28.106181 [debug] [Thread-2 (]: On test.personal_finance_tracker.not_null_stg_transactions_account_type.ad1230bce8: Close
+[0m08:18:28.107179 [debug] [Thread-1 (]: Opening a new connection, currently in state closed
+[0m08:18:28.108178 [debug] [Thread-4 (]: On test.personal_finance_tracker.not_null_stg_transactions_merchant_clean.0e5c23f37e: Close
+[0m08:18:28.109174 [debug] [Thread-3 (]: On test.personal_finance_tracker.not_null_stg_transactions_amount.3629b5421e: Close
+[0m08:18:28.111176 [info ] [Thread-2 (]: 2 of 7 PASS not_null_stg_transactions_account_type ............................. [[32mPASS[0m in 0.26s]
+[0m08:18:28.112167 [debug] [Thread-1 (]: SQL status: OK in 0.005 seconds
+[0m08:18:28.114163 [info ] [Thread-4 (]: 4 of 7 PASS not_null_stg_transactions_merchant_clean ........................... [[32mPASS[0m in 0.26s]
+[0m08:18:28.117153 [debug] [Thread-2 (]: Finished running node test.personal_finance_tracker.not_null_stg_transactions_account_type.ad1230bce8
+[0m08:18:28.115158 [info ] [Thread-3 (]: 3 of 7 PASS not_null_stg_transactions_amount ................................... [[32mPASS[0m in 0.26s]
+[0m08:18:28.119148 [debug] [Thread-1 (]: Using duckdb connection "test.personal_finance_tracker.not_null_stg_transactions_transaction_date.353bde368c"
+[0m08:18:28.120145 [debug] [Thread-4 (]: Finished running node test.personal_finance_tracker.not_null_stg_transactions_merchant_clean.0e5c23f37e
+[0m08:18:28.122140 [debug] [Thread-2 (]: Began running node test.personal_finance_tracker.not_null_stg_transactions_txn_id.76ab070957
+[0m08:18:28.123150 [debug] [Thread-3 (]: Finished running node test.personal_finance_tracker.not_null_stg_transactions_amount.3629b5421e
+[0m08:18:28.125131 [debug] [Thread-1 (]: On test.personal_finance_tracker.not_null_stg_transactions_transaction_date.353bde368c: /* {"app": "dbt", "dbt_version": "1.11.2", "profile_name": "personal_finance_tracker", "target_name": "dev", "node_id": "test.personal_finance_tracker.not_null_stg_transactions_transaction_date.353bde368c"} */
+
+    select
+      count(*) as failures,
+      count(*) != 0 as should_warn,
+      count(*) != 0 as should_error
+    from (
+      
+    
+  
+    
+    
+
+
+
+select transaction_date
+from "personal_finance"."main"."stg_transactions"
+where transaction_date is null
+
+
+
+  
+  
+      
+    ) dbt_internal_test
+[0m08:18:28.127125 [debug] [Thread-4 (]: Began running node test.personal_finance_tracker.unique_stg_transactions_txn_id.be9177e8f7
+[0m08:18:28.128124 [info ] [Thread-2 (]: 6 of 7 START test not_null_stg_transactions_txn_id ............................. [RUN]
+[0m08:18:28.133110 [debug] [Thread-2 (]: Re-using an available connection from the pool (formerly test.personal_finance_tracker.not_null_stg_transactions_account_type.ad1230bce8, now test.personal_finance_tracker.not_null_stg_transactions_txn_id.76ab070957)
+[0m08:18:28.132115 [info ] [Thread-4 (]: 7 of 7 START test unique_stg_transactions_txn_id ............................... [RUN]
+[0m08:18:28.135107 [debug] [Thread-2 (]: Began compiling node test.personal_finance_tracker.not_null_stg_transactions_txn_id.76ab070957
+[0m08:18:28.136102 [debug] [Thread-1 (]: SQL status: OK in 0.005 seconds
+[0m08:18:28.137100 [debug] [Thread-4 (]: Re-using an available connection from the pool (formerly test.personal_finance_tracker.not_null_stg_transactions_merchant_clean.0e5c23f37e, now test.personal_finance_tracker.unique_stg_transactions_txn_id.be9177e8f7)
+[0m08:18:28.147073 [debug] [Thread-2 (]: Writing injected SQL for node "test.personal_finance_tracker.not_null_stg_transactions_txn_id.76ab070957"
+[0m08:18:28.150064 [debug] [Thread-1 (]: On test.personal_finance_tracker.not_null_stg_transactions_transaction_date.353bde368c: ROLLBACK
+[0m08:18:28.151062 [debug] [Thread-4 (]: Began compiling node test.personal_finance_tracker.unique_stg_transactions_txn_id.be9177e8f7
+[0m08:18:28.155463 [debug] [Thread-1 (]: Failed to rollback 'test.personal_finance_tracker.not_null_stg_transactions_transaction_date.353bde368c'
+[0m08:18:28.156459 [debug] [Thread-2 (]: Began executing node test.personal_finance_tracker.not_null_stg_transactions_txn_id.76ab070957
+[0m08:18:28.171419 [debug] [Thread-4 (]: Writing injected SQL for node "test.personal_finance_tracker.unique_stg_transactions_txn_id.be9177e8f7"
+[0m08:18:28.172416 [debug] [Thread-1 (]: On test.personal_finance_tracker.not_null_stg_transactions_transaction_date.353bde368c: Close
+[0m08:18:28.176499 [debug] [Thread-2 (]: Writing runtime sql for node "test.personal_finance_tracker.not_null_stg_transactions_txn_id.76ab070957"
+[0m08:18:28.180487 [debug] [Thread-4 (]: Began executing node test.personal_finance_tracker.unique_stg_transactions_txn_id.be9177e8f7
+[0m08:18:28.193451 [debug] [Thread-4 (]: Writing runtime sql for node "test.personal_finance_tracker.unique_stg_transactions_txn_id.be9177e8f7"
+[0m08:18:28.179586 [info ] [Thread-1 (]: 5 of 7 PASS not_null_stg_transactions_transaction_date ......................... [[32mPASS[0m in 0.11s]
+[0m08:18:28.194449 [debug] [Thread-2 (]: Using duckdb connection "test.personal_finance_tracker.not_null_stg_transactions_txn_id.76ab070957"
+[0m08:18:28.196445 [debug] [Thread-1 (]: Finished running node test.personal_finance_tracker.not_null_stg_transactions_transaction_date.353bde368c
+[0m08:18:28.197442 [debug] [Thread-2 (]: On test.personal_finance_tracker.not_null_stg_transactions_txn_id.76ab070957: BEGIN
+[0m08:18:28.198438 [debug] [Thread-4 (]: Using duckdb connection "test.personal_finance_tracker.unique_stg_transactions_txn_id.be9177e8f7"
+[0m08:18:28.200433 [debug] [Thread-2 (]: Opening a new connection, currently in state closed
+[0m08:18:28.202429 [debug] [Thread-4 (]: On test.personal_finance_tracker.unique_stg_transactions_txn_id.be9177e8f7: BEGIN
+[0m08:18:28.205422 [debug] [Thread-4 (]: Opening a new connection, currently in state closed
+[0m08:18:28.206418 [debug] [Thread-2 (]: SQL status: OK in 0.006 seconds
+[0m08:18:28.207414 [debug] [Thread-2 (]: Using duckdb connection "test.personal_finance_tracker.not_null_stg_transactions_txn_id.76ab070957"
+[0m08:18:28.208413 [debug] [Thread-4 (]: SQL status: OK in 0.003 seconds
+[0m08:18:28.209408 [debug] [Thread-2 (]: On test.personal_finance_tracker.not_null_stg_transactions_txn_id.76ab070957: /* {"app": "dbt", "dbt_version": "1.11.2", "profile_name": "personal_finance_tracker", "target_name": "dev", "node_id": "test.personal_finance_tracker.not_null_stg_transactions_txn_id.76ab070957"} */
+
+    select
+      count(*) as failures,
+      count(*) != 0 as should_warn,
+      count(*) != 0 as should_error
+    from (
+      
+    
+  
+    
+    
+
+
+
+select txn_id
+from "personal_finance"."main"."stg_transactions"
+where txn_id is null
+
+
+
+  
+  
+      
+    ) dbt_internal_test
+[0m08:18:28.210414 [debug] [Thread-4 (]: Using duckdb connection "test.personal_finance_tracker.unique_stg_transactions_txn_id.be9177e8f7"
+[0m08:18:28.212407 [debug] [Thread-4 (]: On test.personal_finance_tracker.unique_stg_transactions_txn_id.be9177e8f7: /* {"app": "dbt", "dbt_version": "1.11.2", "profile_name": "personal_finance_tracker", "target_name": "dev", "node_id": "test.personal_finance_tracker.unique_stg_transactions_txn_id.be9177e8f7"} */
+
+    select
+      count(*) as failures,
+      count(*) != 0 as should_warn,
+      count(*) != 0 as should_error
+    from (
+      
+    
+  
+    
+    
+
+select
+    txn_id as unique_field,
+    count(*) as n_records
+
+from "personal_finance"."main"."stg_transactions"
+where txn_id is not null
+group by txn_id
+having count(*) > 1
+
+
+
+  
+  
+      
+    ) dbt_internal_test
+[0m08:18:28.215392 [debug] [Thread-2 (]: SQL status: OK in 0.004 seconds
+[0m08:18:28.218385 [debug] [Thread-2 (]: On test.personal_finance_tracker.not_null_stg_transactions_txn_id.76ab070957: ROLLBACK
+[0m08:18:28.220382 [debug] [Thread-2 (]: Failed to rollback 'test.personal_finance_tracker.not_null_stg_transactions_txn_id.76ab070957'
+[0m08:18:28.221377 [debug] [Thread-2 (]: On test.personal_finance_tracker.not_null_stg_transactions_txn_id.76ab070957: Close
+[0m08:18:28.223374 [info ] [Thread-2 (]: 6 of 7 PASS not_null_stg_transactions_txn_id ................................... [[32mPASS[0m in 0.09s]
+[0m08:18:28.224468 [debug] [Thread-2 (]: Finished running node test.personal_finance_tracker.not_null_stg_transactions_txn_id.76ab070957
+[0m08:18:28.230329 [debug] [Thread-4 (]: SQL status: OK in 0.017 seconds
+[0m08:18:28.233324 [debug] [Thread-4 (]: On test.personal_finance_tracker.unique_stg_transactions_txn_id.be9177e8f7: ROLLBACK
+[0m08:18:28.234321 [debug] [Thread-4 (]: Failed to rollback 'test.personal_finance_tracker.unique_stg_transactions_txn_id.be9177e8f7'
+[0m08:18:28.235319 [debug] [Thread-4 (]: On test.personal_finance_tracker.unique_stg_transactions_txn_id.be9177e8f7: Close
+[0m08:18:28.237314 [info ] [Thread-4 (]: 7 of 7 PASS unique_stg_transactions_txn_id ..................................... [[32mPASS[0m in 0.10s]
+[0m08:18:28.239309 [debug] [Thread-4 (]: Finished running node test.personal_finance_tracker.unique_stg_transactions_txn_id.be9177e8f7
+[0m08:18:28.242300 [debug] [MainThread]: Using duckdb connection "master"
+[0m08:18:28.243299 [debug] [MainThread]: On master: BEGIN
+[0m08:18:28.244295 [debug] [MainThread]: Opening a new connection, currently in state closed
+[0m08:18:28.246291 [debug] [MainThread]: SQL status: OK in 0.002 seconds
+[0m08:18:28.248285 [debug] [MainThread]: On master: COMMIT
+[0m08:18:28.250443 [debug] [MainThread]: Using duckdb connection "master"
+[0m08:18:28.251442 [debug] [MainThread]: On master: COMMIT
+[0m08:18:28.253437 [debug] [MainThread]: SQL status: OK in 0.001 seconds
+[0m08:18:28.254435 [debug] [MainThread]: On master: Close
+[0m08:18:28.255433 [debug] [MainThread]: Connection 'master' was properly closed.
+[0m08:18:28.257427 [debug] [MainThread]: Connection 'list_personal_finance_main' was properly closed.
+[0m08:18:28.259420 [debug] [MainThread]: Connection 'test.personal_finance_tracker.not_null_stg_transactions_transaction_date.353bde368c' was properly closed.
+[0m08:18:28.260418 [debug] [MainThread]: Connection 'test.personal_finance_tracker.not_null_stg_transactions_txn_id.76ab070957' was properly closed.
+[0m08:18:28.261414 [debug] [MainThread]: Connection 'test.personal_finance_tracker.not_null_stg_transactions_amount.3629b5421e' was properly closed.
+[0m08:18:28.262412 [debug] [MainThread]: Connection 'test.personal_finance_tracker.unique_stg_transactions_txn_id.be9177e8f7' was properly closed.
+[0m08:18:28.263409 [info ] [MainThread]: 
+[0m08:18:28.264406 [info ] [MainThread]: Finished running 7 data tests in 0 hours 0 minutes and 0.74 seconds (0.74s).
+[0m08:18:28.267398 [debug] [MainThread]: Command end result
+[0m08:18:28.320595 [debug] [MainThread]: Wrote artifact WritableManifest to C:\kev\personal_finance_tracker\personal_finance_tracker\target\manifest.json
+[0m08:18:28.324584 [debug] [MainThread]: Wrote artifact SemanticManifest to C:\kev\personal_finance_tracker\personal_finance_tracker\target\semantic_manifest.json
+[0m08:18:28.336552 [debug] [MainThread]: Wrote artifact RunExecutionResult to C:\kev\personal_finance_tracker\personal_finance_tracker\target\run_results.json
+[0m08:18:28.337550 [info ] [MainThread]: 
+[0m08:18:28.338547 [info ] [MainThread]: [32mCompleted successfully[0m
+[0m08:18:28.339544 [info ] [MainThread]: 
+[0m08:18:28.341539 [info ] [MainThread]: Done. PASS=7 WARN=0 ERROR=0 SKIP=0 NO-OP=0 TOTAL=7
+[0m08:18:28.343534 [debug] [MainThread]: Command `dbt test` succeeded at 08:18:28.343534 after 2.83 seconds
+[0m08:18:28.344531 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'invocation', 'label': 'end', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x000002BC79308AD0>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x000002BC78D4D010>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x000002BC017BFD90>]}
+[0m08:18:28.345529 [debug] [MainThread]: Flushing usage events
+[0m08:18:29.274336 [debug] [MainThread]: An error was encountered while trying to flush usage events
