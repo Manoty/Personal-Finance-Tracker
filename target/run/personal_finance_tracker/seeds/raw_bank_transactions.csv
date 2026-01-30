@@ -1,0 +1,13 @@
+
+    
+    
+    
+    create table "personal_finance"."main"."raw_bank_transactions" (txn_id integer,date date,description text,amount float8,account_type text)
+  ;
+    -- dbt seed --
+    
+          COPY "personal_finance"."main"."raw_bank_transactions" FROM 'C:\kev\personal_finance_tracker\personal_finance_tracker\seeds\raw_bank_transactions.csv' (FORMAT CSV, HEADER TRUE, DELIMITER ',')
+        
+
+;
+  

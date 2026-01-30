@@ -1,0 +1,194 @@
+[0m07:51:18.799667 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'invocation', 'label': 'start', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x000001B030534410>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x000001B030535790>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x000001B030535610>]}
+
+
+============================== 07:51:18.807083 | 20a00ab9-5df8-4f13-9cea-b62849654f2d ==============================
+[0m07:51:18.807083 [info ] [MainThread]: Running with dbt=1.11.2
+[0m07:51:18.809083 [debug] [MainThread]: running dbt with arguments {'version_check': 'True', 'no_print': 'None', 'static_parser': 'True', 'warn_error_options': 'WarnErrorOptionsV2(error=[], warn=[], silence=[])', 'target_path': 'None', 'printer_width': '80', 'write_json': 'True', 'introspect': 'True', 'log_cache_events': 'False', 'empty': 'None', 'cache_selected_only': 'False', 'fail_fast': 'False', 'debug': 'False', 'log_format': 'default', 'partial_parse': 'True', 'send_anonymous_usage_stats': 'True', 'quiet': 'False', 'warn_error': 'None', 'profiles_dir': 'C:\\Users\\Evans Moseti\\.dbt', 'invocation_command': 'dbt seed', 'use_colors': 'True', 'indirect_selection': 'eager', 'use_experimental_parser': 'False', 'log_path': 'C:\\kev\\personal_finance_tracker\\personal_finance_tracker\\logs'}
+[0m07:51:19.339805 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'project_id', 'label': '20a00ab9-5df8-4f13-9cea-b62849654f2d', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x000001B0305FD490>]}
+[0m07:51:19.448828 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'adapter_info', 'label': '20a00ab9-5df8-4f13-9cea-b62849654f2d', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x000001B02CD6B690>]}
+[0m07:51:19.471765 [info ] [MainThread]: Registered adapter: duckdb=1.10.0
+[0m07:51:19.942563 [debug] [MainThread]: checksum: 3d40d8bbe1bef07db1c24822f2dbfff8bc07f2a48ed4fe2658a40653aec0b54b, vars: {}, profile: , target: , version: 1.11.2
+[0m07:51:19.944556 [info ] [MainThread]: Unable to do partial parsing because saved manifest not found. Starting full parse.
+[0m07:51:19.948546 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'partial_parser', 'label': '20a00ab9-5df8-4f13-9cea-b62849654f2d', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x000001B0318047D0>]}
+[0m07:51:23.534728 [warn ] [MainThread]: [[33mWARNING[0m]: Configuration paths exist in your dbt_project.yml file which do not apply to any resources.
+There are 2 unused configuration paths:
+- models.personal_finance_tracker.marts
+- models.personal_finance_tracker.staging
+[0m07:51:23.544727 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'load_project', 'label': '20a00ab9-5df8-4f13-9cea-b62849654f2d', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x000001B02F52FAD0>]}
+[0m07:51:23.644214 [debug] [MainThread]: Wrote artifact WritableManifest to C:\kev\personal_finance_tracker\personal_finance_tracker\target\manifest.json
+[0m07:51:23.655173 [debug] [MainThread]: Wrote artifact SemanticManifest to C:\kev\personal_finance_tracker\personal_finance_tracker\target\semantic_manifest.json
+[0m07:51:23.699079 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'resource_counts', 'label': '20a00ab9-5df8-4f13-9cea-b62849654f2d', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x000001B031BEA8D0>]}
+[0m07:51:23.700217 [info ] [MainThread]: Found 1 seed, 472 macros
+[0m07:51:23.702215 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'runnable_timing', 'label': '20a00ab9-5df8-4f13-9cea-b62849654f2d', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x000001B03057E890>]}
+[0m07:51:23.705331 [info ] [MainThread]: 
+[0m07:51:23.706323 [info ] [MainThread]: Concurrency: 4 threads (target='dev')
+[0m07:51:23.708320 [info ] [MainThread]: 
+[0m07:51:23.709337 [debug] [MainThread]: Acquiring new duckdb connection 'master'
+[0m07:51:23.712307 [debug] [ThreadPool]: Acquiring new duckdb connection 'list_personal_finance'
+[0m07:51:27.667364 [debug] [ThreadPool]: Using duckdb connection "list_personal_finance"
+[0m07:51:27.667364 [debug] [ThreadPool]: On list_personal_finance: /* {"app": "dbt", "dbt_version": "1.11.2", "profile_name": "personal_finance_tracker", "target_name": "dev", "connection_name": "list_personal_finance"} */
+
+    
+    select schema_name
+    from system.information_schema.schemata
+    
+    where lower(catalog_name) = '"personal_finance"'
+    
+  
+  
+[0m07:51:27.668359 [debug] [ThreadPool]: Opening a new connection, currently in state init
+[0m07:51:27.707399 [debug] [ThreadPool]: SQL status: OK in 0.038 seconds
+[0m07:51:27.709394 [debug] [ThreadPool]: On list_personal_finance: Close
+[0m07:51:27.711390 [debug] [ThreadPool]: Re-using an available connection from the pool (formerly list_personal_finance, now create_personal_finance_main)
+[0m07:51:27.712386 [debug] [ThreadPool]: Creating schema "database: "personal_finance"
+schema: "main"
+"
+[0m07:51:27.725278 [debug] [ThreadPool]: Using duckdb connection "create_personal_finance_main"
+[0m07:51:27.726279 [debug] [ThreadPool]: On create_personal_finance_main: /* {"app": "dbt", "dbt_version": "1.11.2", "profile_name": "personal_finance_tracker", "target_name": "dev", "connection_name": "create_personal_finance_main"} */
+
+    
+        select type from duckdb_databases()
+        where lower(database_name)='personal_finance'
+        and type='sqlite'
+    
+  
+[0m07:51:27.727274 [debug] [ThreadPool]: Opening a new connection, currently in state closed
+[0m07:51:27.729512 [debug] [ThreadPool]: SQL status: OK in 0.002 seconds
+[0m07:51:27.731507 [debug] [ThreadPool]: Using duckdb connection "create_personal_finance_main"
+[0m07:51:27.732543 [debug] [ThreadPool]: On create_personal_finance_main: BEGIN
+[0m07:51:27.733502 [debug] [ThreadPool]: SQL status: OK in 0.000 seconds
+[0m07:51:27.734536 [debug] [ThreadPool]: Using duckdb connection "create_personal_finance_main"
+[0m07:51:27.735501 [debug] [ThreadPool]: On create_personal_finance_main: /* {"app": "dbt", "dbt_version": "1.11.2", "profile_name": "personal_finance_tracker", "target_name": "dev", "connection_name": "create_personal_finance_main"} */
+
+    
+    
+        create schema if not exists "personal_finance"."main"
+    
+[0m07:51:27.737492 [debug] [ThreadPool]: SQL status: OK in 0.001 seconds
+[0m07:51:27.738523 [debug] [ThreadPool]: On create_personal_finance_main: COMMIT
+[0m07:51:27.739845 [debug] [ThreadPool]: Using duckdb connection "create_personal_finance_main"
+[0m07:51:27.740845 [debug] [ThreadPool]: On create_personal_finance_main: COMMIT
+[0m07:51:27.741841 [debug] [ThreadPool]: SQL status: OK in 0.000 seconds
+[0m07:51:27.742872 [debug] [ThreadPool]: On create_personal_finance_main: Close
+[0m07:51:27.744832 [debug] [ThreadPool]: Acquiring new duckdb connection 'list_personal_finance_main'
+[0m07:51:27.754542 [debug] [ThreadPool]: Using duckdb connection "list_personal_finance_main"
+[0m07:51:27.755541 [debug] [ThreadPool]: On list_personal_finance_main: BEGIN
+[0m07:51:27.756501 [debug] [ThreadPool]: Opening a new connection, currently in state init
+[0m07:51:27.757927 [debug] [ThreadPool]: SQL status: OK in 0.002 seconds
+[0m07:51:27.758925 [debug] [ThreadPool]: Using duckdb connection "list_personal_finance_main"
+[0m07:51:27.759923 [debug] [ThreadPool]: On list_personal_finance_main: /* {"app": "dbt", "dbt_version": "1.11.2", "profile_name": "personal_finance_tracker", "target_name": "dev", "connection_name": "list_personal_finance_main"} */
+select
+      'personal_finance' as database,
+      table_name as name,
+      table_schema as schema,
+      CASE table_type
+        WHEN 'BASE TABLE' THEN 'table'
+        WHEN 'VIEW' THEN 'view'
+        WHEN 'LOCAL TEMPORARY' THEN 'table'
+        END as type
+    from system.information_schema.tables
+    where lower(table_schema) = 'main'
+    and lower(table_catalog) = 'personal_finance'
+  
+[0m07:51:27.785486 [debug] [ThreadPool]: SQL status: OK in 0.025 seconds
+[0m07:51:27.788478 [debug] [ThreadPool]: On list_personal_finance_main: ROLLBACK
+[0m07:51:27.789476 [debug] [ThreadPool]: Failed to rollback 'list_personal_finance_main'
+[0m07:51:27.790474 [debug] [ThreadPool]: On list_personal_finance_main: Close
+[0m07:51:27.792467 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'runnable_timing', 'label': '20a00ab9-5df8-4f13-9cea-b62849654f2d', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x000001B031A9E610>]}
+[0m07:51:27.793263 [debug] [MainThread]: Using duckdb connection "master"
+[0m07:51:27.794267 [debug] [MainThread]: On master: BEGIN
+[0m07:51:27.795295 [debug] [MainThread]: Opening a new connection, currently in state init
+[0m07:51:27.796965 [debug] [MainThread]: SQL status: OK in 0.001 seconds
+[0m07:51:27.797964 [debug] [MainThread]: On master: COMMIT
+[0m07:51:27.797964 [debug] [MainThread]: Using duckdb connection "master"
+[0m07:51:27.799603 [debug] [MainThread]: On master: COMMIT
+[0m07:51:27.800591 [debug] [MainThread]: SQL status: OK in 0.000 seconds
+[0m07:51:27.801621 [debug] [MainThread]: On master: Close
+[0m07:51:27.819866 [debug] [Thread-1 (]: Began running node seed.personal_finance_tracker.raw_bank_transactions
+[0m07:51:27.821853 [info ] [Thread-1 (]: 1 of 1 START seed file main.raw_bank_transactions .............................. [RUN]
+[0m07:51:27.824045 [debug] [Thread-1 (]: Acquiring new duckdb connection 'seed.personal_finance_tracker.raw_bank_transactions'
+[0m07:51:27.824045 [debug] [Thread-1 (]: Began compiling node seed.personal_finance_tracker.raw_bank_transactions
+[0m07:51:27.826029 [debug] [Thread-1 (]: Began executing node seed.personal_finance_tracker.raw_bank_transactions
+[0m07:51:28.061441 [debug] [Thread-1 (]: Using duckdb connection "seed.personal_finance_tracker.raw_bank_transactions"
+[0m07:51:28.061441 [debug] [Thread-1 (]: On seed.personal_finance_tracker.raw_bank_transactions: BEGIN
+[0m07:51:28.062475 [debug] [Thread-1 (]: Opening a new connection, currently in state init
+[0m07:51:28.064432 [debug] [Thread-1 (]: SQL status: OK in 0.002 seconds
+[0m07:51:28.065430 [debug] [Thread-1 (]: Using duckdb connection "seed.personal_finance_tracker.raw_bank_transactions"
+[0m07:51:28.066427 [debug] [Thread-1 (]: On seed.personal_finance_tracker.raw_bank_transactions: /* {"app": "dbt", "dbt_version": "1.11.2", "profile_name": "personal_finance_tracker", "target_name": "dev", "node_id": "seed.personal_finance_tracker.raw_bank_transactions"} */
+
+    create table "personal_finance"."main"."raw_bank_transactions" (txn_id integer,date date,description text,amount float8,account_type text)
+  
+[0m07:51:28.068420 [debug] [Thread-1 (]: SQL status: OK in 0.001 seconds
+[0m07:51:28.090374 [debug] [Thread-1 (]: Using duckdb connection "seed.personal_finance_tracker.raw_bank_transactions"
+[0m07:51:28.091393 [debug] [Thread-1 (]: On seed.personal_finance_tracker.raw_bank_transactions: 
+          COPY "personal_finance"."main"."raw_bank_transactions" FROM 'C:\kev\personal_finance_tracker\personal_finance_tracker\seeds\raw_bank_transactions.csv' (FORMAT CSV, HEADER TRUE, DELIMITER ',')
+        ...
+[0m07:51:28.136483 [debug] [Thread-1 (]: SQL status: OK in 0.044 seconds
+[0m07:51:28.145458 [debug] [Thread-1 (]: Writing runtime SQL for node "seed.personal_finance_tracker.raw_bank_transactions"
+[0m07:51:28.175880 [debug] [Thread-1 (]: On seed.personal_finance_tracker.raw_bank_transactions: COMMIT
+[0m07:51:28.176841 [debug] [Thread-1 (]: Using duckdb connection "seed.personal_finance_tracker.raw_bank_transactions"
+[0m07:51:28.176841 [debug] [Thread-1 (]: On seed.personal_finance_tracker.raw_bank_transactions: COMMIT
+[0m07:51:28.189638 [debug] [Thread-1 (]: SQL status: OK in 0.012 seconds
+[0m07:51:28.192630 [debug] [Thread-1 (]: On seed.personal_finance_tracker.raw_bank_transactions: Close
+[0m07:51:28.196166 [debug] [Thread-1 (]: Sending event: {'category': 'dbt', 'action': 'run_model', 'label': '20a00ab9-5df8-4f13-9cea-b62849654f2d', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x000001B031FB6F50>]}
+[0m07:51:28.197167 [info ] [Thread-1 (]: 1 of 1 OK loaded seed file main.raw_bank_transactions .......................... [[32mINSERT 2500[0m in 0.37s]
+[0m07:51:28.199281 [debug] [Thread-1 (]: Finished running node seed.personal_finance_tracker.raw_bank_transactions
+[0m07:51:28.201154 [debug] [MainThread]: Using duckdb connection "master"
+[0m07:51:28.202150 [debug] [MainThread]: On master: BEGIN
+[0m07:51:28.203148 [debug] [MainThread]: Opening a new connection, currently in state closed
+[0m07:51:28.204429 [debug] [MainThread]: SQL status: OK in 0.001 seconds
+[0m07:51:28.205466 [debug] [MainThread]: On master: COMMIT
+[0m07:51:28.206463 [debug] [MainThread]: Using duckdb connection "master"
+[0m07:51:28.207423 [debug] [MainThread]: On master: COMMIT
+[0m07:51:28.209423 [debug] [MainThread]: SQL status: OK in 0.001 seconds
+[0m07:51:28.210413 [debug] [MainThread]: On master: Close
+[0m07:51:28.211410 [debug] [MainThread]: Connection 'master' was properly closed.
+[0m07:51:28.212408 [debug] [MainThread]: Connection 'create_personal_finance_main' was properly closed.
+[0m07:51:28.213407 [debug] [MainThread]: Connection 'list_personal_finance_main' was properly closed.
+[0m07:51:28.214404 [debug] [MainThread]: Connection 'seed.personal_finance_tracker.raw_bank_transactions' was properly closed.
+[0m07:51:28.216402 [info ] [MainThread]: 
+[0m07:51:28.217396 [info ] [MainThread]: Finished running 1 seed in 0 hours 0 minutes and 4.51 seconds (4.51s).
+[0m07:51:28.220389 [debug] [MainThread]: Command end result
+[0m07:51:28.270884 [debug] [MainThread]: Wrote artifact WritableManifest to C:\kev\personal_finance_tracker\personal_finance_tracker\target\manifest.json
+[0m07:51:28.274874 [debug] [MainThread]: Wrote artifact SemanticManifest to C:\kev\personal_finance_tracker\personal_finance_tracker\target\semantic_manifest.json
+[0m07:51:28.286511 [debug] [MainThread]: Wrote artifact RunExecutionResult to C:\kev\personal_finance_tracker\personal_finance_tracker\target\run_results.json
+[0m07:51:28.287548 [info ] [MainThread]: 
+[0m07:51:28.288507 [info ] [MainThread]: [32mCompleted successfully[0m
+[0m07:51:28.290501 [info ] [MainThread]: 
+[0m07:51:28.291499 [info ] [MainThread]: Done. PASS=1 WARN=0 ERROR=0 SKIP=0 NO-OP=0 TOTAL=1
+[0m07:51:28.293601 [debug] [MainThread]: Command `dbt seed` succeeded at 07:51:28.292600 after 9.66 seconds
+[0m07:51:28.293601 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'invocation', 'label': 'end', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x000001B030523290>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x000001B030523390>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x000001B0295AD010>]}
+[0m07:51:28.294601 [debug] [MainThread]: Flushing usage events
+[0m07:51:29.319350 [debug] [MainThread]: An error was encountered while trying to flush usage events
+[0m07:52:10.376413 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'invocation', 'label': 'start', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x0000019C1F3E35D0>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x0000019C1F4001D0>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x0000019C1F400E90>]}
+
+
+============================== 07:52:10.382395 | 480ebd7e-15b7-4278-8b84-d85120ffe354 ==============================
+[0m07:52:10.382395 [info ] [MainThread]: Running with dbt=1.11.2
+[0m07:52:10.384357 [debug] [MainThread]: running dbt with arguments {'static_parser': 'True', 'no_print': 'None', 'version_check': 'True', 'target_path': 'None', 'warn_error_options': 'WarnErrorOptionsV2(error=[], warn=[], silence=[])', 'printer_width': '80', 'write_json': 'True', 'introspect': 'True', 'log_cache_events': 'False', 'empty': 'False', 'cache_selected_only': 'False', 'log_format': 'default', 'debug': 'False', 'fail_fast': 'False', 'profiles_dir': 'C:\\Users\\Evans Moseti\\.dbt', 'send_anonymous_usage_stats': 'True', 'quiet': 'False', 'warn_error': 'None', 'partial_parse': 'True', 'indirect_selection': 'eager', 'invocation_command': 'dbt run', 'use_colors': 'True', 'use_experimental_parser': 'False', 'log_path': 'C:\\kev\\personal_finance_tracker\\personal_finance_tracker\\logs'}
+[0m07:52:10.831472 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'project_id', 'label': '480ebd7e-15b7-4278-8b84-d85120ffe354', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x0000019C1BC27CD0>]}
+[0m07:52:10.957707 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'adapter_info', 'label': '480ebd7e-15b7-4278-8b84-d85120ffe354', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x0000019C1BC40110>]}
+[0m07:52:10.962404 [info ] [MainThread]: Registered adapter: duckdb=1.10.0
+[0m07:52:11.495334 [debug] [MainThread]: checksum: 3d40d8bbe1bef07db1c24822f2dbfff8bc07f2a48ed4fe2658a40653aec0b54b, vars: {}, profile: , target: , version: 1.11.2
+[0m07:52:11.752130 [debug] [MainThread]: Partial parsing enabled: 0 files deleted, 0 files added, 0 files changed.
+[0m07:52:11.753127 [debug] [MainThread]: Nothing changed, skipping partial parsing.
+[0m07:52:11.755122 [debug] [MainThread]: Partial parsing enabled, no changes found, skipping parsing
+[0m07:52:11.773699 [warn ] [MainThread]: [[33mWARNING[0m]: Configuration paths exist in your dbt_project.yml file which do not apply to any resources.
+There are 2 unused configuration paths:
+- models.personal_finance_tracker.marts
+- models.personal_finance_tracker.staging
+[0m07:52:11.828436 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'load_project', 'label': '480ebd7e-15b7-4278-8b84-d85120ffe354', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x0000019C20950D90>]}
+[0m07:52:11.964193 [debug] [MainThread]: Wrote artifact WritableManifest to C:\kev\personal_finance_tracker\personal_finance_tracker\target\manifest.json
+[0m07:52:11.969188 [debug] [MainThread]: Wrote artifact SemanticManifest to C:\kev\personal_finance_tracker\personal_finance_tracker\target\semantic_manifest.json
+[0m07:52:12.025032 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'resource_counts', 'label': '480ebd7e-15b7-4278-8b84-d85120ffe354', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x0000019C20885A10>]}
+[0m07:52:12.026028 [info ] [MainThread]: Found 1 seed, 472 macros
+[0m07:52:12.028022 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'runnable_timing', 'label': '480ebd7e-15b7-4278-8b84-d85120ffe354', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x0000019C1C317710>]}
+[0m07:52:12.034006 [warn ] [MainThread]: Nothing to do. Try checking your model configs and model specification args
+[0m07:52:12.039991 [debug] [MainThread]: Command end result
+[0m07:52:12.099159 [debug] [MainThread]: Wrote artifact WritableManifest to C:\kev\personal_finance_tracker\personal_finance_tracker\target\manifest.json
+[0m07:52:12.103261 [debug] [MainThread]: Wrote artifact SemanticManifest to C:\kev\personal_finance_tracker\personal_finance_tracker\target\semantic_manifest.json
+[0m07:52:12.111355 [debug] [MainThread]: Wrote artifact RunExecutionResult to C:\kev\personal_finance_tracker\personal_finance_tracker\target\run_results.json
+[0m07:52:12.114347 [debug] [MainThread]: Command `dbt run` succeeded at 07:52:12.113350 after 1.88 seconds
+[0m07:52:12.115343 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'invocation', 'label': 'end', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x0000019C1F18D250>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x0000019C1F3E33D0>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x0000019C1F3E3190>]}
+[0m07:52:12.116347 [debug] [MainThread]: Flushing usage events
+[0m07:52:13.033924 [debug] [MainThread]: An error was encountered while trying to flush usage events
