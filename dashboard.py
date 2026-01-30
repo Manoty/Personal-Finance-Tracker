@@ -48,7 +48,7 @@ with col2:
     st.metric("Avg Daily Spend", f"${avg_daily:,.2f}")
 
 with col3:
-    total_txns = burn_rate['cumulative_transactions'].iloc[-1]
+    total_txns = burn_rate['transaction_count'].sum()
     st.metric("Total Transactions", f"{int(total_txns):,}")
 
 with col4:
