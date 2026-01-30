@@ -1,1 +1,1 @@
-{"_invocation_id": "480ebd7e-15b7-4278-8b84-d85120ffe354", "linked": {"0": {"name": "seed.personal_finance_tracker.raw_bank_transactions", "type": "seed"}}}
+{"_invocation_id": "ffdbd942-41d5-47c2-aba9-90838f08c948", "linked": {"0": {"name": "seed.personal_finance_tracker.raw_bank_transactions", "type": "seed", "succ": [2]}, "1": {"name": "model.personal_finance_tracker.fct_burn_rate", "type": "model"}, "2": {"name": "model.personal_finance_tracker.stg_transactions", "type": "model", "succ": [1]}}}
