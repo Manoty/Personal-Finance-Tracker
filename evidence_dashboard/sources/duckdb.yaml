@@ -1,0 +1,4 @@
+name: duckdb
+type: duckdb
+options:
+  filename: personal_finance.duckdb
